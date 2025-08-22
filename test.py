@@ -51,3 +51,6 @@ if st.button("결과 확인"):
 # 하단 문구
 st.markdown("---")
 st.markdown("<center><small>🦷 꾸준한 양치가 건강한 미소의 시작입니다.</small></center>", unsafe_allow_html=True)
+
+https://img.freepik.com/free-vector/young-man-brushing-teeth_1308-104614.jpg
+
