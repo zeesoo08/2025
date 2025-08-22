@@ -6,9 +6,6 @@ st.set_page_config(page_title="양치 체크", page_icon="🪥", layout="centere
 # 사용자 정의 스타일
 st.markdown("""
     <style>
-    body {
-        background-color: #f0f8ff;
-    }
     .title {
         text-align: center;
         font-size: 40px;
@@ -33,22 +30,24 @@ st.markdown("""
 
 # 타이틀
 st.markdown('<div class="title">🦷 오늘의 양치 체크</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">치아 건강을 위해 하루 3번 이상 양치했는지 확인해보세요!</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">치아 건강을 위해 하루 3번 양치했는지 확인해보세요!</div>', unsafe_allow_html=True)
 
-# 애니메이션 이미지
-st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTZkZjg4MGEwNzk3Nzc4NzQ1ODUzNjA2ZTY2NTRjNDViYjNjOGVmMCZjdD1n/WS7h9vfJ3gyUElFxYJ/giphy.gif", width=300)
+# 귀여운 양치 GIF
+st.image("https://media.giphy.com/media/WS7h9vfJ3gyUElFxYJ/giphy.gif", width=300)
 
 # 입력
 count = st.number_input("오늘 양치한 횟수를 입력하세요 🪥", min_value=0, max_value=10, step=1)
 
-# 버튼 누르면 결과 보여주기
+# 버튼
 if st.button("결과 확인"):
-    if count <= 3:
-        st.error("😬 하루에 양치를 3번 이하로 했어요! 조금 더 노력해봐요!")
-        st.info("💡 하루 3번 이상 양치하면 충치 예방에 도움이 돼요.")
+    if count == 3:
+        st.balloons()
+        st.success("🎉 훌륭해요! 하루 3번 정확히 양치했어요!")
+        st.markdown("✨ 이런 꾸준함이 치아 건강을 지켜줘요!")
     else:
-        st.success("😁 완벽해요! 오늘도 상쾌한 입속을 유지했네요!")
+        st.warning("🪥 하루에 3번 양치하는 걸 목표로 해보세요!")
+        st.info("💡 아침, 점심, 저녁 식사 후 양치하면 좋아요.")
 
 # 하단 문구
 st.markdown("---")
-st.markdown("<center><small>🦷 건강한 치아는 꾸준한 관리에서 시작됩니다.</small></center>", unsafe_allow_html=True)
+st.markdown("<center><small>🦷 꾸준한 양치가 건강한 미소의 시작입니다.</small></center>", unsafe_allow_html=True)
