@@ -30,14 +30,15 @@ st.markdown("""
 
 # 타이틀
 st.markdown('<div class="title">🦷 오늘의 양치 체크</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">치아 건강을 위해 오늘 하루 양치했는지 확인해보세요!</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">치아 건강을 위해 하루 3번 양치했는지 확인해보세요!</div>', unsafe_allow_html=True)
 
-https://img.freepik.com/free-vector/young-man-brushing-teeth_1308-104614.jpg
+# 새 이미지 (치과 일러스트)
+st.image("https://cdn.pixabay.com/photo/2022/02/03/01/45/dental-care-6990487_1280.png", width=300)
 
-# 양치 횟수 입력
+# 입력
 count = st.number_input("오늘 양치한 횟수를 입력하세요 🪥", min_value=0, max_value=10, step=1)
 
-# 버튼 클릭 시 결과 출력
+# 버튼
 if st.button("결과 확인"):
     if count == 3:
         st.balloons()
