@@ -28,26 +28,26 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 타이틀
+# 타이틀 & 설명
 st.markdown('<div class="title">🦷 오늘의 양치 체크</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">치아 건강을 위해 하루 3번 양치했는지 확인해보세요!</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">하루 3번 양치하는 습관, 치아 건강을 지켜줍니다!</div>', unsafe_allow_html=True)
 
-# 새 이미지 (치과 일러스트)
-st.image("https://cdn.pixabay.com/photo/2022/02/03/01/45/dental-care-6990487_1280.png", width=300)
+# ✅ 양치 이미지 추가
+st.image("https://img.freepik.com/free-vector/young-man-brushing-teeth_1308-104614.jpg", width=400, caption="오늘도 양치 잘했나요?")
 
-# 입력
+# 입력 받기
 count = st.number_input("오늘 양치한 횟수를 입력하세요 🪥", min_value=0, max_value=10, step=1)
 
-# 버튼
+# 결과 확인 버튼
 if st.button("결과 확인"):
     if count == 3:
         st.balloons()
-        st.success("🎉 훌륭해요! 하루 3번 정확히 양치했어요!")
-        st.markdown("✨ 이런 꾸준함이 치아 건강을 지켜줘요!")
+        st.success("🎉 완벽해요! 하루 3번 양치 성공!")
+        st.markdown("✨ 꾸준한 습관이 치아 건강을 지켜줘요!")
     else:
         st.warning("🪥 하루에 3번 양치하는 걸 목표로 해보세요!")
-        st.info("💡 아침, 점심, 저녁 식사 후 양치하면 좋아요.")
+        st.info("💡 아침, 점심, 저녁 식사 후 양치를 권장합니다.")
 
 # 하단 문구
 st.markdown("---")
-st.markdown("<center><small>🦷 꾸준한 양치가 건강한 미소의 시작입니다.</small></center>", unsafe_allow_html=True)
+st.markdown("<center><small>🦷 치아는 평생 함께해야 할 소중한 친구입니다.</small></center>", unsafe_allow_html=True)
