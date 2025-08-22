@@ -17,7 +17,7 @@ st.markdown('<div class="title">🦷 오늘의 양치 체크</div>', unsafe_allo
 st.markdown('<div class="subtitle">하루 3번 양치한 습관, 치아 건강의 시작입니다!</div>', unsafe_allow_html=True)
 
 # 선택한 이미지 (예: 1번 거울 앞 양치 장면)
-st.image("https://img.freepik.com/premium-vector/young-man-brushing-teeth-bathroom-oral-hygiene-care-dental-health_17140668.jpg", width=400)
+st.image("https://svgrepo.com/show/493413/man-brushing-his-teeth-in-the-mirror.svg", width=300, caption="거울 앞에서 양치하는 모습")
 
 # 양치 횟수 입력
 count = st.number_input("오늘 양치한 횟수를 입력하세요 🪥", min_value=0, max_value=10, step=1)
