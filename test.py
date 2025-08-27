@@ -12,12 +12,11 @@ brushing = st.radio(
     index=0
 )
 
-# 선택에 따른 메시지 출력
-if brushing == 1:
-    st.warning("🦷 노력해! 내일은 조금 더 해보자 💪")
-elif brushing == 2:
-    st.info("😃 잘하고 있어! 조금만 더 하려고 노력하자 ✨")
-elif brushing == 3:
-    st.success("👏 정말 잘했어! 입안이 개운하겠는걸?! 🌟🪥")
-
-st.write("👉 꾸준한 양치로 건강한 치아를 유지해요! 💖")
+# 버튼 클릭 후 결과 출력
+if st.button("확인하기 ✅"):
+    if brushing == 1:
+        st.warning("🦷 노력해! 내일은 조금 더 해보자 💪")
+    elif brushing == 2:
+        st.info("😃 잘하고 있어! 조금만 더 하려고 노력하자 ✨")
+    elif brushing == 3:
+        st.success("👏 정말 잘했어! 입안이 개운하겠는걸?! 🌟🪥")
