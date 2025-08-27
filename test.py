@@ -20,14 +20,16 @@ brushing = st.radio(
 if st.button("확인하기 ✅"):
     if brushing == 1:
         st.warning("🦷 노력해! 내일은 조금 더 해보자 💪")
+        st.session_state.show_quiz = False  # 퀴즈 숨김
     elif brushing == 2:
         st.info("😃 잘하고 있어! 조금만 더 하려고 노력하자 ✨")
+        st.session_state.show_quiz = False  # 퀴즈 숨김
     elif brushing == 3:
         st.success("👏 정말 잘했어! 입안이 개운하겠는걸?! 🌟🪥")
         st.balloons()
-        st.session_state.show_quiz = True  # 버튼 누르면 퀴즈 보이도록 설정
+        st.session_state.show_quiz = True   # 3번일 때만 퀴즈 보이도록
 
-# 3번 선택 + 버튼 클릭 후에만 퀴즈가 나타나고 유지됨
+# 3번일 때만 퀴즈 표시 (유지됨)
 if st.session_state.show_quiz:
     st.subheader("❓ 왜 양치를 해야 할까요?")
     quiz_answer = st.radio(
