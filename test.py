@@ -45,4 +45,5 @@ if st.session_state.show_quiz:
     )
 
     if quiz_answer:
-        st.success("🎉 정답입니다! 말씀하신 이유 모두 양치가 꼭 필요한 이유예요 🦷✨")
+        st.success("🎉 이 문제의 답은 1~4번 전부 정답입니다..! 🦷✨\n\n"
+                   "그만큼 양치하는 습관이 중요하니 깨끗히 양치를 해보아요-!!!! 😁🪥")
