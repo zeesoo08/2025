@@ -14,9 +14,7 @@ if st.button("확인하기 ✅"):
     caption="⚠️ 이렇게 심하게 썩을 수 있어요! 양치의 중요성을 잊지 마세요!",
     use_column_width=True
 )
-⚠️ 양치를 게을리하면 이렇게 될 수 있어요!",
-            use_column_width=True
-        )
+
     elif brushing == 2:
         st.info("😃 잘하고 있어! 조금만 더 하려고 노력하자 ✨")
     elif brushing == 3:
